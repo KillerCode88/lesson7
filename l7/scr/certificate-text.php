@@ -1,4 +1,7 @@
 <?php
+$name = '';
+$correctString = '';
+$wrongString = '';
 if ($_POST) {
     $test = json_decode(file_get_contents('../' . $_POST['testFile']));
     $correct = 0;
