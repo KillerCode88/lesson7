@@ -46,6 +46,7 @@ if (isset($_FILES['testFile'])) {
         if ($_FILES['testFile']['error'] === UPLOAD_ERR_OK && move_uploaded_file($_FILES['testFile']['tmp_name'] , $upLoadFile)) {
             header('Location: list.php');
             echo "<h3>Файл успешно загружен на сервер</h3>";
+            exit;
         } else {
             echo "<h3>Ошибка! Не удалось загрузить файл</h3>";
             exit;
