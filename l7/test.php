@@ -1,6 +1,6 @@
 <?php
 if (!file_exists(__DIR__ . '/tests/' . $_GET["name"] . '.json')) {
-    header('HTTP/1.1 404 Not Found');
+    header($_SERVER['SERVER_PROTOCOL'] . "404 Not Found");
     exit;
 }
 $testFile = '/tests/' . $_GET["name"] . '.json';
